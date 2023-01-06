@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Submition page</title>
+    </head>
+    <body>
+        <fieldset>
+            <h2>Submit your Resume</h2>
+            <form>
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <label for="fname">First name</label><br>
+                    <input type="text" name="fname" placeholder="username" maxlength="20"><br>
+                    <label for="mname">Middle name</label><br>
+                    <input type="text" name="fname" placeholder="username" maxlength="20"><br>
+                    <label for="lname">Last name</label><br>
+                    <input type="text" name="fname" placeholder="username" maxlength="20"><br>
+                    <label for="dob">Date of Birth</label><br>
+                    <input type="date" name="dob"><br>
+                    <label for="age">Age</label><br>
+                    <input type="number" name="age" min="18" max="50" placeholder=">18 & >50"><br>
+                    <label for="gendr">Gender</label><br>
+                    <input type="radio" name="gender">Male<br>
+                    <input type="radio" name="gender">Female<br>
+                </fieldset>
+                <input type="range" min="0" max="100" value="20" readonly>20% out of 100%<br>
+                <fieldset>
+                    <legend>Address Details</legend>
+                    <label for="addr">Address</label>
+                    <textarea rows="3" cols="30" name="addr"></textarea><br>
+                    <label for="city">City/Town</label><br>
+                    <input type="text" name="city" maxlength="25"><br>
+                    <label for="state">State</label><br>
+                    <input type="text" name="state"maxlength="20"><br>
+                    <label for="zipcode">Zipcode</label><br>
+                    <input type="number" name="zipcode"><br>
+                </fieldset>
+                <input type="range" min="0" max="100" value="40" readonly>40% out of 100%<br>
+                
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="tele">Telephone</label><br>
+                    <input type="number" name="tele" maxlength="10"><br>
+                    <label for="mobile">Mobile</label><br>
+                    <input type="number" name="mobile" maxlength="10"><br>
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email"><br>
+                    <label for="site">Website</label><br>
+                    <input type="url" name="site"><br>
+                </fieldset>
+                <input type="range" min="0" max="100" value="60" readonly>60% out of 100%<br>
+                <fieldset>
+                    <legend>Education Details</legend>
+                    <table border="1">
+                    <form>
+                        <tr>
+                            <td>Qualification</td>
+                            <td>Board/University</td>
+                            <td>Country</td>
+                            <td>Starting Year</td>
+                            <td>Ending Year</td>
+                            <td>Percentage</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="chck1">10th
+                            </td>
+                            <td>
+                                <input type="text" maxlength="30" placeholder="Type in here">
+                            </td>
+                            <td>
+                                <select name="drpdwn1">
+                                    <option>India</option>
+                                    <option>Other</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="date">
+                            </td>
+                            <td>
+                                <input type="date">
+                            </td>
+                            <td>
+                                <input type="number" min="0" max="100">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="chck2">12th
+                            </td>
+                            <td>
+                                <input type="text" maxlength="30" placeholder="Type in here">
+                            </td>
+                            <td>
+                                <select name="drpdwn2">
+                                    <option>India</option>
+                                    <option>Other</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="date">
+                            </td>
+                            <td>
+                                <input type="date">
+                            </td>
+                            <td>
+                                <input type="number" min="0" max="100">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="chck3">B.Tech
+                            </td>
+                            <td>
+                                <input type="text" maxlength="30" placeholder="Type in here">
+                            </td>
+                            <td>
+                                <select name="drpdwn3">
+                                    <option>India</option>
+                                    <option>Other</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="date">
+                            </td>
+                            <td>
+                                <input type="date">
+                            </td>
+                            <td>
+                                <input type="number" min="0" max="100">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="chck4">M.Tech
+                            </td>
+                            <td>
+                                <input type="text" maxlength="30" placeholder="Type in here">
+                            </td>
+                            <td>
+                                <select name="drpdwn4">
+                                    <option>India</option>
+                                    <option>Other</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="date">
+                            </td>
+                            <td>
+                                <input type="date">
+                            </td>
+                            <td>
+                                <input type="number" min="0" max="100">
+                            </td>
+                        </tr>
+                    </form>
+                    </table>
+                </fieldset>
+                <input type="range" min="0" max="100" value="80" readonly>80% out of 100%<br>
+                <fieldset>
+                    <p>Attach your resume in pdf format</p>
+                    <input type="file">
+                </fieldset>
+                <input type="range" min="0" max="100" value="100" readonly>100% out of 100%<br>
+                <input type="submit" value="Submit">
+            </form>
+        </fieldset>
+    </body>
+</html>
