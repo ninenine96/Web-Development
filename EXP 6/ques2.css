@@ -1,0 +1,36 @@
+#danger{
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    width: 20px;
+    height: 400px;
+    background-color: rgb(7, 72, 76);
+}
+    
+#dangermsg{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: red;
+    display: none;
+    text-align: center;
+}
+    
+#box{
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+#car{
+    padding-top: 100px;
+    width: 20%;
+}
+
+#buttons{
+    padding: 70px 0;
+    text-align: center;
+}

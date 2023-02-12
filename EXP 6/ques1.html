@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ques1.js"></script>
+    <title>Style Modification</title>
+    <style>
+        #box{
+        width:200px;
+        height:100px;
+        background-color:yellow;
+        border: 1px solid blue;
+        margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" style="text-align: center;padding-top:50px;">
+        Welcome Here
+    </div><br><br>
+    <div class="modification">
+        <form>
+            <label for="bg-color">Background Color: </label> 
+            <input name="bg-color" id="bgcolor" type="color" onchange="bg_Color()"><br><br>
+
+            <label for="text-color">Text Color: </label> 
+            <input name="text-color" id="tcolor" type="color" onchange="textColor()"><br><br>
+
+            <label for="size">Text size (in 'px'): </label>
+            <input name="size" type="number" id="tsize" onkeyup="textSize()"><br><br>
+
+            <label for="width">Box Width (in 'px'): </label>
+            <input name="width" id="width" type="text" onkeyup="boxWidth()"><br><br>
+
+            <label for="height">Box Height (in 'px'): </label>
+            <input name="height" id="height" type="text" onkeyup="boxHeight()"><br><br>
+
+            <label type="opacity">Change Opacity: </label>
+            <input name="opacity" id="opacity" type="range" onchange="opacity()" value="100">
+        </form>
+    </div>
+</body>
+</html>
