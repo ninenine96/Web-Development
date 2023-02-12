@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Cake Shop</title>
+    <script>
+        function orderCalculate(){
+            var choco = document.getElementById("choco").value;
+            var vanilla = document.getElementById("vanilla").value;
+            var butterscotch = document.getElementById("butterscotch").value;
+            var darkForest = document.getElementById("darkForest").value;
+            var choco_cost = 340;
+            var vanilla_cost = 300;
+            var butterscotch_cost = 420;
+            var darkForest_cost = 400;
+            var totalCost = parseInt(choco) * choco_cost + parseInt(vanilla) * vanilla_cost + parseInt(butterscotch) * butterscotch_cost + parseInt(darkForest) * darkForest_cost;
+
+            var x = "<div class='bill-head'>Purchase Order Bill!!</div><br/>";
+            var y = "<center><div class='bill-total'>Total Bill = " + totalCost + "</div></center>";
+            document.getElementById("output").innerHTML = x + y;
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <ul id="navbar_li">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li style="float: right;"><a href="#">Sign In</a></li>
+        </ul>
+    </div>
+
+    <div class="items">
+        <div class="container" id="container_1">
+            <div>
+                <img class="chocolate" src="chocolate.jpeg">
+            </div>
+            <div id="cake_1" class="class_head">
+                <div>Chocolate Cake</div>
+            </div><br>
+            <div>
+                <form class="form-quan">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" name="quantity" id="choco" value="0">
+                </form>
+            </div>
+        </div>
+        <div class="container" id="container_2">
+            <div>
+                <img class="vanilla" src="vanilla.jpg">
+            </div>
+            <div id="cake_2" class="class_head">
+                <div>Vanilla Cake</div>
+            </div><br>
+            <div>
+                <form class="form-quan">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" name="quantity" id="vanilla" value="0">
+                </form>
+            </div>
+        </div>
+        <div class="container" id="container_3">
+            <div>
+                <img class="butterscotch" src="butterscotch.jpeg">
+            </div>
+            <div id="cake_3" class="class_head">
+                <div>Butterscotch Cake</div>
+            </div><br>
+            <div>
+                <form class="form-quan">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" name="quantity" id="butterscotch" value="0">
+                </form>
+            </div>
+        </div>
+        <div class="container" id="container_4">
+            <div>
+                <img class="darkForest" src="darkForest.jpeg">
+            </div>
+            <div id="cake_4" class="class_head">
+                <div>Dark Forest Cake</div>
+            </div><br>
+            <div>
+                <form class="form-quan">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" name="quantity" id="darkForest" value="0">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <center><div id="calc-button" onclick="orderCalculate()">Calculate Cost</div></center><br>
+    <p id="output"></p>
+</body>
+</html>

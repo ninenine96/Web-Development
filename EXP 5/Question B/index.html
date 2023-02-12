@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EMI CALCULATOR</title>
+        <meta name="viewport" content="width=device-width-width,intial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <script>
+            function emi(){
+                var loanAmount = document.getElementById("loan-amount").value;
+                var interestRate = document.getElementById("interest-rate").value;
+                var loanTerm = document.getElementById("loan-term").value;
+    
+                var totalRate = parseInt(interestRate) / (12 * 100);
+                var n = parseInt(loanTerm) * 12;
+                var emi = (parseInt(loanAmount) * totalRate * Math.pow(1 + totalRate, n)) / (Math.pow(1 + totalRate, n) - 1);  
+
+                let a = "Loan Amount: (₹)" + loanAmount + "<br/>";
+                let b = "Total Interest: (₹)" + totalRate + "<br/>";
+                let c = "Your EMI is: (₹)" + emi.toFixed(2) + "<br/>";
+                let d = "Total Repayment: (₹)" + (parseInt(loanAmount) + parseInt(totalRate)).toFixed(2) + "<br/>";
+                document.getElementById('result').innerHTML = a + b + c + d;
+            }
+        </script>
+    </head>
+        <body>
+            <div>
+                <h2>EMI CALCULATOR</h2>
+                <p class="text">Loan Amount</p>
+                <input type="text" id="loan-amount" >
+                <p class="text">Annual Interest</p>
+                <input type="text" id="interest-rate" >
+                <p class="text">Years</p>
+                <input type="text" id="loan-term" onkeyup="emi()">
+                <p id="result"></p>
+           
+            </div>
+        </body>
+</html>
