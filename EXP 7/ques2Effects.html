@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(
+            function(){
+                $("#show").click(function(){
+                    $("#box").show();
+                });
+                $("#hide").click(function(){
+                    $("#box").hide();
+                });
+                $("#toggle").click(function(){
+                    $("#box").toggle();
+                });
+                $("#fadeIn").click(function(){
+                    $("#box").fadeIn();
+                });
+                $("#fadeOut").click(function(){
+                    $("#box").fadeOut();
+                });
+                $("#fadeToggle").click(function(){
+                    $("#box").fadeToggle();
+                });
+                $("#slideUp").click(function(){
+                    $("#box").slideUp();
+                });
+                $("#slideDown").click(function(){
+                    $("#box").slideDown();
+                });
+                $("#slideToggle").click(function(){
+                    $("#box").slideToggle();
+                });
+                $("#animate").click(function(){
+                    $("#box").animate({left: '250px'}, "slow");
+                });
+            }
+        );
+    </script>
+    <style>
+        #box{
+            width:200px;
+            height:100px;
+            left: 0px;
+            background-color:yellow;
+            border: 1px solid blue;
+            padding-top:50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="effects">
+        <form>
+            <input id="show" type="button" value="Show">
+            <input id="hide" type="button" value="Hide">
+            <input type="button" value="Toggle (show/hide)" id="toggle">
+            <input id="fadeIn" type="button" value="Fade In">
+            <input id="fadeOut" type="button" value="Fade Out">
+            <input id="fadeToggle" type="button" value="Fade Toggle">
+            <input id="slideUp" type="button" value="Slide Up">
+            <input id="slideDown" type="button" value="Slide Down">
+            <input id="slideToggle" type="button" value="Slide Toggle">
+            <input id="animate" type="button" value="Animate">
+        </form>
+    </div><br><br>
+
+    <div id="box">
+        <!-- <div>
+            Welcome Here
+        </div> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <link rel="stylesheet" href="ques1.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(
+            function(){
+                $("#evaluate-btn").click(
+                function(){
+                    var amount = $("#amount").val();
+                    var rent = $("#rent").val();
+                    var accessories = $("#accessories").val();
+                    var emergency = $("#emergency").val();
+                    var savings = $("#savings").val();
+                    var totalPercent = parseInt(rent) + parseInt(accessories) + parseInt(emergency) + parseInt(savings);
+
+                    if (totalPercent <= 100) {
+                        rent = (rent / 100) * amount;
+                        accessories = (accessories / 100) * amount;
+                        emergency = (emergency / 100) * amount;
+                        savings = (savings / 100) * amount;
+                        $("#result").html("\
+                            <div>Room Rent: Rs." + rent + "</div>\
+                            <div>Accessories: Rs." + accessories + "</div>\
+                            <div>Emergency: Rs." + emergency + "</div>\
+                            <div>Savings: Rs." + savings + "</div>"
+                        );
+                    }
+                    else if (totalPercent > 100){
+                        window.alert("Percentage distribution is not done correctly");
+                    }
+                    else{
+                        window.alert("Something went wrong")
+                    }
+                });
+            });
+    </script>
+</head>
+<body>
+    <h3 id="heading">Budget Calculator App</h3>
+    <div class="my-form">
+        <form>
+            <h3>Amount to be Managed</h3><br>
+            <input type="number" id="amount" required><br>
+            <h3>How would you like to divide your money?</h3><br>
+            <label for="rent">Room Rent(%): </label>
+            <input type="number" name="rent" id="rent" required>
+            <label for="accessories">Accessories(%): </label>
+            <input type="number" name="accessories" id="accessories" required>
+            <label for="emergency">Emergency(%): </label>
+            <input type="number" name="emergency" id="emergency" required>
+            <label for="savings">Savings(%): </label>
+            <input type="number" name="savings" id="savings" required><br>
+        </form><br>
+        <center>
+            <div id="evaluate-btn">
+                <div id="btn-text">
+                    Evaluate My Money
+                </div>
+            </div>
+        </center>
+        <br>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
