@@ -1,13 +1,23 @@
 function bg_Color(){
     var div = document.getElementById("box");
     var bgcolor = document.getElementById("bgcolor").value;
-    div.style.backgroundColor = bgcolor;
+    if (bgcolor == document.getElementById("tcolor").value){
+        alert("Cannot keep same color")
+    }
+    else{
+        div.style.backgroundColor = bgcolor;
+    }
 }
 
 function textColor(){
     var div = document.getElementById("box");
     var tcolor = document.getElementById("tcolor").value;
-    div.style.color = tcolor;
+    if (document.getElementById("bgcolor").value == tcolor){
+        alert("Cannot keep same color")
+    }
+    else{
+        div.style.color = tcolor;
+    }
 }
 
 function textSize(){
