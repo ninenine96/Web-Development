@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <link href="ques2.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myController', function($scope) {
+            $scope.products = [
+                {
+                    'pname' : 'Apple',
+                    'price' : 100
+                },
+                {
+                    'pname' : 'Orange',
+                    'price' : 70
+                }
+            ];
+            $scope.addItem = function() {
+                $scope.pushItem = {'pname' : $scope.pname, 'price' : $scope.price};
+                $scope.products.push($scope.pushItem);
+            };
+            $scope.removeItem = function(indx) {
+                $scope.products.splice(indx, 1);
+            };
+        });
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+    <div class="head">
+        <h1>Product Inventory System</h1>
+    </div>
+    
+    <div class="container">
+        <label for="pname">Enter the product Name: </label><br>
+        <input type="text" name="pname" ng-model="pname" required><br>
+        <label for="price">Enter the product price: </label><br>
+        <input type="number" name="price" ng-model="price" required><br>
+        <button id="btn" ng-click="addItem()">Add Product</button><br>
+    </div>
+    
+    <hr style="width: 50%;">
+
+    <div class="inventory">
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Remove</th>
+            </tr>
+            <tr ng-repeat="product in products">
+                <td>{{product.pname}}</td>
+                <td>{{product.price}}</td>
+                <td><a href="" ng-click="removeItem($index)">Remove</a></td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+body{
+    margin: 0%;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: blue;
+}
+form{
+    margin-top: 5%;
+}
+#heading{
+    width: 100%;
+    height: 40px;
+    margin: 0%;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+.my-form{
+    text-align: center;
+}
+.output div{
+    display: inline-block;
+    margin: 5%;
+}
+#result_rent, #result_accessories, #result_emergency, #result_savings {
+    width: 100px;
+    height: 10%;
+}
+#result_rent {
+    background-color: aquamarine;
+}
+#result_accessories {
+    background-color: bisque;
+}
+#result_emergency {
+    background-color: chocolate;
+}
+#result_savings {
+    background-color: yellowgreen;
+}
