@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <title>Routing</title>
+    <style>
+        body{
+            margin: 0%;
+        }
+        .navbar {
+            background-color: #252525;
+            width: 100%;
+            top: 0%;
+            color: white;
+        }
+        .navbar li {
+            display: inline-block;
+            padding-inline: 5%;
+            padding-block: 1%;
+        }
+        .navbar li:hover{
+            background-color: #111;
+        }
+        a {
+            text-decoration: none;
+        }
+        li a{
+            color: white;
+        }
+    </style>
+  </head>
+  <body ng-app="myapp">
+    <h1>Angular JS Routing</h1>
+    <div class="navbar">
+        <ul>
+            <li><a href="#!pd">Personal Details</a>
+            <li><a href="#!ad">Academic Details</a></li>
+            <li><a href="#!projects">Project Details</a></li>
+            <li><a href="#!login">Login</a></li>
+            <li><a href="#!signup">Sign Up</a></li>
+        </ul>
+    </div>
+    <div ng-view></div>
+    <script>
+      var app = angular.module("myapp", ["ngRoute"]);
+      app.config(function ($routeProvider) {
+        $routeProvider
+        .when("/pd", {
+        templateUrl: "personaldetails.html",
+        })
+        .when("/ad", {
+        templateUrl: "academicdetails.html",
+        })
+        .when("/projects", {
+        templateUrl: "projects.html",
+        })
+        .when("/login", {
+        templateUrl: "signin.html",
+        })
+        .when("/signup", {
+        templateUrl: "signUp.html",
+        })
+        .otherwise({
+          template : "<h1>Information not found</h1>"
+        });
+      });
+    </script>
+  </body>
+</html>
