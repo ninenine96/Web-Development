@@ -1,0 +1,45 @@
+.container{
+    background-color: #252525;
+    color: white;
+    width: 25%;
+    position: relative;
+    margin-top: 3%;
+    border-radius: 5%;
+    padding: 3%;
+    box-shadow: 0px 0px 80px 40px rgb(48, 48, 48);
+    margin-right: auto;
+    margin-left: auto;
+}
+.signuptag {
+    text-align: center;
+    font-size: small;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.container h2{
+    text-align: center;
+}
+input:focus {
+    background-color: rgb(212, 234, 242);
+  }
+.inputbox{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.submit {
+  width: 100%;
+  background-color: rgb(5, 5, 5);
+  color: rgb(255, 255, 255);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
